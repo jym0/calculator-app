@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=Work+Sans&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <section class="screen">
+        <div class="calc_screen" id="calcScreen">0</div>
+        <div class="output_screen" id="outputScreen"></div>
+      </section>
+      <section class="buttons">
+        <button class="clear_ops blue" id="clear" onclick="clearScreen()">
+          C
+        </button>
+        <button
+          class="divide_ops blue symbols operator"
+          onclick="operations('÷')"
+        >
+          ÷
+        </button>
+        <button
+          class="times_ops blue symbols operator"
+          onclick="operations('x')"
+        >
+          x
+        </button>
+        <button class="delete blue symbols" id="delete">&#8592;</button>
+        <button class="num" onclick="numbers(7)">7</button>
+        <button class="num" onclick="numbers(8)">8</button>
+        <button class="num" onclick="numbers(9)">9</button>
+        <button
+          class="minus_ops blue symbols operator"
+          onclick="operations('-')"
+        >
+          -
+        </button>
+        <button class="num" onclick="numbers(4)">4</button>
+        <button class="num" onclick="numbers(5)">5</button>
+        <button class="num" onclick="numbers(6)">6</button>
+        <button
+          class="plus_ops blue symbols operator"
+          onclick="operations('+')"
+        >
+          +
+        </button>
+        <button class="num" onclick="numbers(1)">1</button>
+        <button class="num" onclick="numbers(2)">2</button>
+        <button class="num" onclick="numbers(3)">3</button>
+        <button class="equals_ops symbols" id="equals">&equals;</button>
+        <button class="percnt_ops operator" onclick="operations('%')">%</button>
+        <button class="num" onclick="numbers(0)">0</button>
+        <button class="point symbols" onclick="operations('.')">.</button>
+      </section>
+    </main>
 
-    <div id="number-background"></div>
-
-    <div class="container">
-        <div class="calculator-screen">
-            <div data-previous-operand class="previous-value">
-            </div>
-            <div data-current-operand class="current-value">0
-            </div>
-        </div>
-        <button data-clear class="highlight">C</button>
-        <button data-operation class="highlight">÷</button>
-        <button data-operation class="highlight">×</button>
-        <button data-delete><svg width="46" height="46" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2Zm0 16H7.07L2.4 12l4.66-7H22v14Zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59 10.41 17Z"></path>
-        </svg></button>
-        <button data-number>7</button>
-        <button data-number>8</button>
-        <button data-number>9</button>
-        <button data-operation class="highlight">-</button>
-        <button data-number>4</button>
-        <button data-number>5</button>
-        <button data-number>6</button>
-        <button data-operation class="highlight">+</button>
-        <button data-number>3</button>
-        <button data-number>2</button>
-        <button data-number>1</button>
-        <button data-equals class="btn-equals highlight">=</button>
-        <button data-operation class="modulo">%</button>
-        <button data-number>.</button>
-        <button data-number>0</button>
-
-    </div>
-
-    
-    
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
